@@ -1,0 +1,34 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+node_modules/       # Node.js
+venv/               # Python
+.venv/              # Python
+vendor/             # PHP/Composer
+target/             # Java/Rust
+bin/                # .NET/Java
+obj/                # .NET
+
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+config.json         # Si contiene credenciales
+
+dist/
+build/
+out/
+*.log
+*.tmp
+*.bak
+
+*.sqlite
+*.db
+node_modules
