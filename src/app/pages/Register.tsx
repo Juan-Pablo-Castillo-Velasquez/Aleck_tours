@@ -15,7 +15,8 @@ export default function Register() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Mock registration
-    navigate("/login");
+     navigate("/onboarding-preferences");
+
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,6 +25,8 @@ export default function Register() {
       [e.target.name]: e.target.value,
     });
   };
+
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#2563EB] via-[#06B6D4] to-[#F59E0B] flex items-center justify-center p-4">

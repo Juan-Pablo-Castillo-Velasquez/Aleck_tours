@@ -11,6 +11,7 @@ import Personalization from "./pages/Personalization";
 import Benefits from "./pages/Benefits";
 import Corporate from "./pages/Corporate";
 import TravelInfo from "./pages/TravelInfo";
+import PreferencesForm from "./pages/PreferencesForm";
 
 export const router = createBrowserRouter([
   {
@@ -61,4 +62,8 @@ export const router = createBrowserRouter([
     path: "/travel-info",
     Component: TravelInfo,
   },
+  {
+    path: "/onboarding-preferences", // Nueva ruta
+    Component: PreferencesForm,
+  }
 ]);

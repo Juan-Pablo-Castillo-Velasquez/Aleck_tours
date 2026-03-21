@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 export default function Home() {
   const recommendedPackages = packages.slice(0, 6);
 
-  const floatingAnimation = {
+  const floatingAnimation:any = {
     y: [0, -20, 0],
     transition: {
       duration: 3,
@@ -37,7 +37,7 @@ export default function Home() {
           
           {/* Floating elements */}
           <motion.div
-            animate={floatingAnimation}
+           animate={floatingAnimation}
             className="absolute top-20 right-20 w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full"
           />
           <motion.div
@@ -226,7 +226,7 @@ export default function Home() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/search"
+              href="search"
               className="inline-block px-8 py-4 bg-gradient-to-r from-[#FF6B35] to-[#F7931E] text-white rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300"
             >
               Ver todos los paquetes
