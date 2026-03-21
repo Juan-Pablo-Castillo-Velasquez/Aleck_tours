@@ -4,6 +4,7 @@ import PackageCard from "../components/PackageCard";
 import { packages } from "../data/packages";
 import { TrendingUp, Shield, Headphones, Star, Globe, Award, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
+import { URL } from "react-dnd-html5-backend/dist/NativeTypes";
 
 export default function Home() {
   const recommendedPackages = packages.slice(0, 6);
@@ -29,21 +30,54 @@ export default function Home() {
             initial={{ scale: 1.2, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5 }}
-            src="https://images.unsplash.com/photo-1765978372751-aa89dc6d30e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMHZhY2F0aW9uJTIwYmVhY2glMjByZXNvcnR8ZW58MXx8fHwxNzc0MDUwNjMyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="../../../img/banner2.jpg"
             alt="Hero"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-[#FF6B35]/30" />
           
-          {/* Floating elements */}
-          <motion.div
-           animate={floatingAnimation}
-            className="absolute top-20 right-20 w-20 h-20 bg-white/10 backdrop-blur-sm rounded-full"
-          />
+          <motion.div 
+  style={{
+    backgroundImage: "url('https://store-images.s-microsoft.com/image/apps.8453.13655054093851568.4a371b72-2ce8-4bdb-9d83-be49894d3fa0.7f3687b9-847d-4f86-bb5c-c73259e2b38e')",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+  }}
+  className="absolute top-20 right-20 w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full border border-white/40 z-20 cursor-pointer"
+
+  initial={{ opacity: 0, scale: 0.8, y: 10 }} 
+  animate={{ 
+    opacity: 1, 
+    scale: 1, 
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 0.6,
+      delay: 0.3, 
+      ease: [0, 0.71, 0.2, 1.01],
+    }
+  }}
+  whileHover={{ 
+    y: [0, -4, 0], 
+    scale: 1.05,
+    transition: {
+      y: {
+        repeat: Infinity, 
+        duration: 1.2,
+        ease: "easeInOut",
+      },
+      scale: {
+        duration: 0.3,
+      }
+    }
+  }}
+/>
           <motion.div
             animate={{ ...floatingAnimation, transition: { ...floatingAnimation.transition, delay: 0.5 } }}
             className="absolute bottom-40 left-20 w-16 h-16 bg-[#FF6B35]/20 backdrop-blur-sm rounded-full"
+            
           />
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plane w-7 h-7 text-white"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
         </div>
 
         {/* Hero Content */}
