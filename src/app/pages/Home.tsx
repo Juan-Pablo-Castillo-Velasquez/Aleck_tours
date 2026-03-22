@@ -74,7 +74,7 @@ export default function Home() {
 />
           <motion.div
             animate={{ ...floatingAnimation, transition: { ...floatingAnimation.transition, delay: 0.5 } }}
-            className="absolute bottom-40 left-20 w-16 h-16 bg-[#FF6B35]/20 backdrop-blur-sm rounded-full"
+            className="absolute bottom-20 left-20 w-16 h-16 bg-[#FF6B35]/20 backdrop-blur-sm rounded-full"
             
           />
           
